@@ -31,3 +31,23 @@ body {
     text-wrap: balance;
   }
 }
+
+.kBlack1{
+  background-color: #272627;
+}
+
+.kBlack2{
+  background-color: #353435;
+}
+
+.kCream{
+  color: #EFE1D1;
+}
+
+.kBlue2{
+  color: #14FFEC;
+}
+
+.kGreen1{
+  color: #4fa94d
+}
