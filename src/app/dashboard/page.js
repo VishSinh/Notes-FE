@@ -9,7 +9,6 @@ import { useAppSelector, useAppDispatch } from "@/lib/hooks";
 import NotesService from "@/service/api/notesService";
 import NoteAddIcon from '@mui/icons-material/NoteAdd';
 import PageLoader from "@/components/ui/pageLoader";
-import CheckId from "@/components/utils/checkId";
 
 export default function Dashboard() {
 
@@ -28,11 +27,9 @@ export default function Dashboard() {
 
     useEffect(() => {
 
-        CheckId;
+        if (localStorage.getItem("userIdHash") == undefined || localStorage.getItem("userIdHash") == "false") { window.location.href = "/"; return; }
 
-        if (localStorage.getItem("userIdHash") == undefined || localStorage.getItem("userIdHash") == false) { window.location.href = "/"; return; }
-
-        if (localStorage.getItem("detailsExist") == undefined || localStorage.getItem("detailsExist") == false) { window.location.href = "/user/details"; return; }
+        if (localStorage.getItem("detailsExist") == undefined || localStorage.getItem("detailsExist") == "false") { window.location.href = "/user/details"; return; }
 
         setIsAdmin(localStorage.getItem("isAdmin") === "true");
 

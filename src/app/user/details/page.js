@@ -8,7 +8,11 @@ export default function Signup() {
 
     const [isLoading, setIsLoading] = useState(true)
 
-    useEffect(() => { setTimeout(() => (setIsLoading(false)), 500); }, []);
+    useEffect(() => {
+        if (localStorage.getItem("userIdHash") == undefined || localStorage.getItem("userIdHash") == "false") { window.location.href = "/"; return; }
+        
+        setTimeout(() => (setIsLoading(false)), 500);
+    }, []);
 
     async function onSubmit(event) {
         event.preventDefault()

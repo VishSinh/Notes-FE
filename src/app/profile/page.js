@@ -39,6 +39,9 @@ export default function Profile() {
 
         }
 
+        if (localStorage.getItem("userIdHash") == undefined || localStorage.getItem("userIdHash") == "false") { window.location.href = "/"; return; }
+
+
         fetchUserDetails();
 
 

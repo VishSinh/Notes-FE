@@ -34,6 +34,10 @@ class UserService {
                 }
             })
 
+            
+
+            localStorage.setItem("detailsExist", "true");
+
             return { success: true, message: "User details saved successfully" };
         }
         catch (e) {
